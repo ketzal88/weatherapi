@@ -4,7 +4,7 @@ import Moment from "react-moment";
 
 function CardComponent({ main, weather, title, footer, loading }) {
   return (
-    <Card className="text-center overflow-hidden m-1">
+    <Card className="text-center overflow-hidden m-2 mb-5">
       <Card.Body>
         {title && <Card.Title>{title}</Card.Title>}
 
@@ -16,7 +16,7 @@ function CardComponent({ main, weather, title, footer, loading }) {
               <img
                 alt={weather.description}
                 src={`http://openweathermap.org/img/w/${weather.icon}.png`}
-                style={{ maxWidth: "10em" }}
+                style={{ maxWidth: "4em" }}
               />
             ) : (
               <></>

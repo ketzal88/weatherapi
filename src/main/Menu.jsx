@@ -3,11 +3,10 @@ import { Navbar, Container } from "react-bootstrap";
 
 function Menu({ ciudad }) {
   return (
-    <Navbar bg="dark" expand="sm">
+    <Navbar bg="dark" expand="xl">
       <Container>
         <Navbar.Brand href="#home" style={{ color: "white" }}>
-          El clima de la semana en las <br />
-          principales ciudades del mundo
+          WeatherAPI by Gabriel Uccello
         </Navbar.Brand>
         {ciudad && (
           <Navbar.Text style={{ color: "white" }}>

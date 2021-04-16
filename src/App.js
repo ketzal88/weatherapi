@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./shards-dashboards.1.1.0.min.css";
 import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -43,7 +44,7 @@ function App() {
           )
           .then((response) => {
             setHoy(response.data.current);
-            setPronostico(response.data.daily);
+            setPronostico(response.data.daily.splice(3));
             setLoading(false);
           })
           .catch((error) => {
@@ -78,23 +79,6 @@ function App() {
         console.log(error);
       });
   };
-
-  // const getCiudad = () => {
-  //   axios
-  //     .get(
-  //       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}`
-  //     )
-  //     .then((response) => {
-  //       setCiudad(response.data.name);
-  //       setLati(response.data.coord.lat);
-  //       setLongi(response.data.coord.lon);
-  //       setLoading(false);
-  //       console.log(lat, long);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
 
   return (
     <div className="App">

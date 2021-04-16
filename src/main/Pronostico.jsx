@@ -1,12 +1,11 @@
 import React from "react";
 import { Container, Row, Spinner } from "react-bootstrap";
 import Card from "../main/Card";
-import PropTypes from "prop-types";
 
 function Pronostico({ pronostico, loading }) {
   return (
     <Container fluid="sm">
-      <Row lg={5} className="justify-content-md-center">
+      <Row lg={6} className="justify-content-md-center">
         {loading ? (
           <Spinner animation="grow" className="m-2"></Spinner>
         ) : (
@@ -25,15 +24,5 @@ function Pronostico({ pronostico, loading }) {
     </Container>
   );
 }
-
-Pronostico.defaultProps = {
-  forecast: [],
-  loading: false,
-};
-
-Pronostico.prototype = {
-  forecast: PropTypes.array,
-  loading: PropTypes.bool,
-};
 
 export default Pronostico;
